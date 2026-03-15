@@ -4,7 +4,7 @@
       "workspace": "~/.picoclaw/workspace",
       "restrict_to_workspace": true,
       "model_name": "gpt-5.4",
-      "max_tokens": 8192,
+      "max_tokens": 4096,
       "temperature": 0.7,
       "max_tool_iterations": 20,
       "summarize_message_threshold": 20,
@@ -41,48 +41,9 @@
       "model_name": "deepseek",
       "model": "deepseek/deepseek-chat",
       "api_key": "sk-your-deepseek-key"
-    },
-    {
-      "model_name": "longcat",
-      "model": "longcat/LongCat-Flash-Thinking",
-      "api_key": "your-longcat-api-key"
-    },
-    {
-      "model_name": "modelscope-qwen",
-      "model": "modelscope/Qwen/Qwen3-235B-A22B-Instruct-2507",
-      "api_key": "your-modelscope-access-token",
-      "api_base": "https://api-inference.modelscope.cn/v1"
-    },
-    {
-      "model_name": "azure-gpt5",
-      "model": "azure/my-gpt5-deployment",
-      "api_key": "your-azure-api-key",
-      "api_base": "https://your-resource.openai.azure.com"
-    },
-    {
-      "model_name": "loadbalanced-gpt-5.4",
-      "model": "openai/gpt-5.4",
-      "api_key": "sk-key1",
-      "api_base": "https://api1.example.com/v1"
-    },
-    {
-      "model_name": "loadbalanced-gpt-5.4",
-      "model": "openai/gpt-5.4",
-      "api_key": "sk-key2",
-      "api_base": "https://api2.example.com/v1"
     }
   ],
   "channels": {
-    "telegram": {
-      "enabled": false,
-      "token": "YOUR_TELEGRAM_BOT_TOKEN",
-      "base_url": "",
-      "proxy": "",
-      "allow_from": [
-        "YOUR_USER_ID"
-      ],
-      "reasoning_channel_id": ""
-    },
     "discord": {
       "enabled": false,
       "token": "YOUR_DISCORD_BOT_TOKEN",
@@ -100,21 +61,6 @@
       "allow_from": [],
       "reasoning_channel_id": ""
     },
-    "maixcam": {
-      "enabled": false,
-      "host": "0.0.0.0",
-      "port": 18790,
-      "allow_from": [],
-      "reasoning_channel_id": ""
-    },
-    "whatsapp": {
-      "enabled": false,
-      "bridge_url": "ws://localhost:3001",
-      "use_native": false,
-      "session_store_path": "",
-      "allow_from": [],
-      "reasoning_channel_id": ""
-    },
     "feishu": {
       "enabled": false,
       "app_id": "",
@@ -129,47 +75,6 @@
       "enabled": false,
       "client_id": "YOUR_CLIENT_ID",
       "client_secret": "YOUR_CLIENT_SECRET",
-      "allow_from": [],
-      "reasoning_channel_id": ""
-    },
-    "slack": {
-      "enabled": false,
-      "bot_token": "xoxb-YOUR-BOT-TOKEN",
-      "app_token": "xapp-YOUR-APP-TOKEN",
-      "allow_from": [],
-      "reasoning_channel_id": ""
-    },
-    "matrix": {
-      "enabled": false,
-      "homeserver": "https://matrix.org",
-      "user_id": "@your-bot:matrix.org",
-      "access_token": "YOUR_MATRIX_ACCESS_TOKEN",
-      "device_id": "",
-      "join_on_invite": true,
-      "allow_from": [],
-      "group_trigger": {
-        "mention_only": true
-      },
-      "placeholder": {
-        "enabled": true,
-        "text": "Thinking... 💭"
-      },
-      "reasoning_channel_id": ""
-    },
-    "line": {
-      "enabled": false,
-      "channel_secret": "YOUR_LINE_CHANNEL_SECRET",
-      "channel_access_token": "YOUR_LINE_CHANNEL_ACCESS_TOKEN",
-      "webhook_path": "/webhook/line",
-      "allow_from": [],
-      "reasoning_channel_id": ""
-    },
-    "onebot": {
-      "enabled": false,
-      "ws_url": "ws://127.0.0.1:3001",
-      "access_token": "",
-      "reconnect_interval": 5,
-      "group_trigger_prefix": [],
       "allow_from": [],
       "reasoning_channel_id": ""
     },
@@ -206,106 +111,6 @@
       "max_steps": 10,
       "welcome_message": "Hello! I'm your AI assistant. How can I help you today?",
       "reasoning_channel_id": ""
-    },
-    "irc": {
-      "enabled": false,
-      "server": "irc.libera.chat:6697",
-      "tls": true,
-      "nick": "mybot",
-      "user": "",
-      "real_name": "",
-      "password": "",
-      "nickserv_password": "",
-      "sasl_user": "",
-      "sasl_password": "",
-      "channels": [
-        "#mychannel"
-      ],
-      "request_caps": [
-        "server-time",
-        "message-tags"
-      ],
-      "allow_from": [],
-      "group_trigger": {
-        "mention_only": true
-      },
-      "typing": {
-        "enabled": false
-      },
-      "reasoning_channel_id": ""
-    }
-  },
-  "providers": {
-    "_comment": "DEPRECATED: Use model_list instead. This will be removed in a future version",
-    "anthropic": {
-      "api_key": "",
-      "api_base": ""
-    },
-    "openai": {
-      "api_key": "",
-      "api_base": "",
-      "web_search": true
-    },
-    "openrouter": {
-      "api_key": "sk-or-v1-xxx",
-      "api_base": ""
-    },
-    "groq": {
-      "api_key": "gsk_xxx",
-      "api_base": ""
-    },
-    "zhipu": {
-      "api_key": "YOUR_ZHIPU_API_KEY",
-      "api_base": ""
-    },
-    "gemini": {
-      "api_key": "",
-      "api_base": ""
-    },
-    "vllm": {
-      "api_key": "",
-      "api_base": ""
-    },
-    "nvidia": {
-      "api_key": "nvapi-xxx",
-      "api_base": "",
-      "proxy": "http://127.0.0.1:7890"
-    },
-    "moonshot": {
-      "api_key": "sk-xxx",
-      "api_base": ""
-    },
-    "qwen": {
-      "api_key": "sk-xxx",
-      "api_base": ""
-    },
-    "ollama": {
-      "api_key": "",
-      "api_base": "http://localhost:11434/v1"
-    },
-    "cerebras": {
-      "api_key": "",
-      "api_base": ""
-    },
-    "volcengine": {
-      "api_key": "",
-      "api_base": ""
-    },
-    "mistral": {
-      "api_key": "",
-      "api_base": "https://api.mistral.ai/v1"
-    },
-    "avian": {
-      "api_key": "",
-      "api_base": "https://api.avian.io/v1"
-    },
-    "longcat": {
-      "api_key": "",
-      "api_base": "https://api.longcat.chat/openai"
-    },
-    "modelscope": {
-      "api_key": "",
-      "api_base": "https://api-inference.modelscope.cn/v1"
     }
   },
   "tools": {
@@ -313,43 +118,11 @@
     "allow_write_paths": null,
     "web": {
       "enabled": true,
-      "brave": {
-        "enabled": false,
-        "api_key": "YOUR_BRAVE_API_KEY",
-        "api_keys": [
-          "YOUR_BRAVE_API_KEY"
-        ],
-        "max_results": 5
-      },
       "tavily": {
         "enabled": false,
         "api_key": "",
         "base_url": "",
         "max_results": 0
-      },
-      "duckduckgo": {
-        "enabled": true,
-        "max_results": 5
-      },
-      "perplexity": {
-        "enabled": false,
-        "api_key": "pplx-xxx",
-        "api_keys": [
-          "pplx-xxx"
-        ],
-        "max_results": 5
-      },
-      "searxng": {
-        "enabled": false,
-        "base_url": "http://localhost:8888",
-        "max_results": 5
-      },
-      "glm_search": {
-        "enabled": false,
-        "api_key": "",
-        "base_url": "https://open.bigmodel.cn/api/paas/v4/web_search",
-        "search_engine": "search_std",
-        "max_results": 5
       },
       "fetch_limit_bytes": 10485760
     },
@@ -395,17 +168,6 @@
             "GITHUB_PERSONAL_ACCESS_TOKEN": "YOUR_GITHUB_TOKEN"
           }
         },
-        "brave-search": {
-          "enabled": false,
-          "command": "npx",
-          "args": [
-            "-y",
-            "@modelcontextprotocol/server-brave-search"
-          ],
-          "env": {
-            "BRAVE_API_KEY": "YOUR_BRAVE_API_KEY"
-          }
-        },
         "postgres": {
           "enabled": false,
           "command": "npx",
@@ -414,18 +176,6 @@
             "@modelcontextprotocol/server-postgres",
             "postgresql://user:password@localhost/dbname"
           ]
-        },
-        "slack": {
-          "enabled": false,
-          "command": "npx",
-          "args": [
-            "-y",
-            "@modelcontextprotocol/server-slack"
-          ],
-          "env": {
-            "SLACK_BOT_TOKEN": "YOUR_SLACK_BOT_TOKEN",
-            "SLACK_TEAM_ID": "YOUR_SLACK_TEAM_ID"
-          }
         }
       }
     },
@@ -442,9 +192,9 @@
           "enabled": true,
           "base_url": "https://clawhub.ai",
           "auth_token": "",
-          "search_path": "",
-          "skills_path": "",
-          "download_path": "",
+          "search_path": "/api/v1/search",
+          "skills_path": "/api/v1/skills",
+          "download_path": "/api/v1/download",
           "timeout": 0,
           "max_zip_size": 0,
           "max_response_size": 0
@@ -518,6 +268,6 @@
   },
   "gateway": {
     "host": "127.0.0.1",
-    "port": 18790
+    "port": 8080
   }
 }
